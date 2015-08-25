@@ -32,7 +32,7 @@ minetest.register_node(":qt_dungeons:jackolantern", {
     minetest.remove_node({x=pos.x,y=pos.y-1,z=pos.z})
     local p = pointed_thing.above
     p.y = p.y+1
-    minetest.env:add_entity({x=pos.x,y=pos.y-1,z=pos.z}, "dulsiexperience:snowjack")
+    minetest.add_entity({x=pos.x,y=pos.y-1,z=pos.z}, "dulsiexperience:snowjack")
    else
     local ret = minetest.item_place(stack, placer, pointed_thing)
     if ret==nil then
